@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="textColorPrimary">#008577</color>
+    <color name="windowBackground">#ffffff</color>
+    <color name="navigationBarColor">#f5f5dc</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name ="green">@android:color/holo_green_light</color>
+    <color name="splashBackgroundColor">#ff5757</color>
+    <color name="navBarItemColor">#000000</color>
+    <color name="homeFragmentColor">#FFFFFF</color>
+    <color name="horizontalCalendarNumberBackground">#FFFFFF</color>
+    <color name="horizontalCalendarBackgroundTint">#FFFFFF</color>
+    <color name="horizontalCalendarTodaysDateBackgorund">#dbeef8</color>
+    <color name="horizontalCalendarTextColor">#0B2850</color>
+    <color name="horizontalCalendarChosenDayColor">#6B99B4</color>
+
+
 </resources>
