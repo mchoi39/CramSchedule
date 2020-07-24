@@ -15,7 +15,9 @@ public class SplashActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
         System.out.println(user);
         if (user != null) {
             // User is signed in

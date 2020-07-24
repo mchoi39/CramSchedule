@@ -209,5 +209,4 @@ public class Home_Fragment extends Fragment  implements DatePickerListener {
         super.onStart();
         eventAdapter.startListening();
     }
-    }
-
+}
