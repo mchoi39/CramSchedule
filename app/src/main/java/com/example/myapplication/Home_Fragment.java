@@ -34,6 +34,7 @@ import org.joda.time.DateTime;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class Home_Fragment extends Fragment  implements DatePickerListener {
@@ -162,21 +163,11 @@ public class Home_Fragment extends Fragment  implements DatePickerListener {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
                 if(task.isSuccessful()){
-                    classes.add(Objects.requireNonNull(task.getResult()).getString("class1"));
-                    if (task.getResult().getString("class2") != null){
-                        classes.add((task.getResult()).getString("class2"));
-                    }
-                    if (task.getResult().getString("class3") != null){
-                        classes.add((task.getResult()).getString("class3"));
-                    }
-                    if (task.getResult().getString("class4") != null){
-                        classes.add((task.getResult()).getString("class4"));
-                    }
-                    if (task.getResult().getString("class5") != null){
-                        classes.add((task.getResult()).getString("class5"));
-                    }
-                    if (task.getResult().getString("class6") != null){
-                        classes.add((task.getResult()).getString("class6"));
+                    Map<String, Object> map = Objects.requireNonNull(task.getResult()).getData();
+                    if (map != null) {
+                        for (Map.Entry<String, Object> entry : map.entrySet()) {
+                            classes.add(entry.getValue().toString());
+                        }
                     }
 
                     Query query = firebaseFirestore.collection(year).document(month).collection(day).whereIn("className", classes).orderBy("dateTime", Query.Direction.ASCENDING);

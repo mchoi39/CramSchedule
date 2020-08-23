@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_light">
-
+    android:background="@android:color/white">
 
     <Button
         android:id="@+id/logout_btn"
@@ -22,46 +21,23 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/saved_events"
         android:layout_width="match_parent"
-        android:layout_height="318dp"
+        android:layout_height="500dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/saved_events_textview" />
 
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/classes_recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="318dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/my_classes_title" />
-
     <TextView
         android:id="@+id/saved_events_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="72dp"
         android:text="Saved Events"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/my_classes_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="My Classes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/saved_events"
-        android:textSize="18dp"/>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

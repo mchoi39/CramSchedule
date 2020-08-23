@@ -40,6 +40,7 @@ public class ClassAdapter extends FirestoreRecyclerAdapter<ClassModel, ClassAdap
 
     }
 
+
     public class ClassViewHolder extends RecyclerView.ViewHolder {
         TextView className;
         public ClassViewHolder(@NonNull View itemView) {

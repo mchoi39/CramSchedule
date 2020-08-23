@@ -18,7 +18,6 @@ public class SplashActivity extends AppCompatActivity {
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
-        System.out.println(user);
         if (user != null) {
             // User is signed in
             // Start home activity

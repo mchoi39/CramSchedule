@@ -102,7 +102,6 @@ public class EventAdapter extends FirestoreRecyclerAdapter<EventModel, EventAdap
                             //ystem.out.println(id);
                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                             if (user != null) {
-                                System.out.println("click working");
                                 DocumentReference mUserDocRef = FirebaseFirestore.getInstance().collection("Users").document(user.getUid()).collection("SavedEvents").document(id);
                                 mUserDocRef.set(RSVPDoc);
                             } else {

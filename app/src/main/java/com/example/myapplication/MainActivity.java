@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity{
         manager.beginTransaction().add(R.id.fragment_container, homeFragment, "1").commit();
         manager.beginTransaction().add(R.id.fragment_container, calendarFragment, "2").hide(calendarFragment).commit();
         manager.beginTransaction().add(R.id.fragment_container, userFragment, "3").hide(userFragment).commit();
+
     }
 
 
@@ -35,7 +36,6 @@ public class MainActivity extends AppCompatActivity{
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch(item.getItemId()){
                 case R.id.nav_home:
-                    System.out.println(R.id.nav_home);
                     manager.beginTransaction().hide(active).show(homeFragment).commit();
                     active = homeFragment;
                     return true;
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity{
                     manager.beginTransaction().hide(active).show(userFragment).commit();
                     active = userFragment;
                     return true;
+
             }
             return false;
         }
